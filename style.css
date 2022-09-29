@@ -1,0 +1,304 @@
+body{
+  font-family:'Montserrat', sans-serif;
+}
+header{
+  background: #BBBBBB;
+  padding:20px;
+
+}
+
+.caixa{
+  position: relative;
+  width:940px;
+  margin: 0 auto;
+}
+
+nav{
+  position:absolute;
+  top: 110px;
+  right:0;
+
+}
+
+nav li {
+  display: inline ;
+  margin: 0 0 0 15px;
+  /* posicoes da margem:top right down and left  */
+}
+
+nav a{
+  text-transform: uppercase;
+  color: #000000;
+  font-size: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+nav a:hover{
+  color:#C78C19;
+  text-decoration: underline;
+}
+
+.produtos{
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px 0px  ;
+
+}
+
+.produtos li {
+  display: inline-block;
+  text-align:center;
+  width:30%;
+  vertical-align: top;
+  
+  margin:0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+.produtos li:hover{
+  border-color: #C78C19;
+}
+
+.produtos li:active {
+  border-color: #088C19;
+  
+}
+
+.produtos li:hover h2{
+  font-size: 35px;
+}
+
+.produtos h2{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.produto-descricao {
+  font: size 18px;
+
+}
+
+.produto-preco{
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+footer{
+  text-align:center;
+  background:url("bg.jpg");
+  padding:40px;
+}
+
+.copyright{
+  color:#ffffff;
+  margin:20px 0 0 ;
+}
+main{
+  
+}
+
+form{
+  margin:40 px 0;
+}
+
+form label, form p{
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.input-padrao {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+}
+.checkbox{
+  margin: 20px 0;
+}
+.enviar{
+  width: 40%;
+  padding:15px 0;
+  background:orange;
+  color: white;
+  font-size:18px;
+  border:none;
+  border-radius: 5px;
+  border-top: 10px;
+  margin: 30px;
+  transition: 1s all;
+  cursor:pointer;
+
+
+}
+
+.enviar:hover{
+  background-color: darkorange;
+  transform: scale(1.2);
+}
+
+table{
+  margin:20px 0 40px;
+}
+
+thead{
+  background: #555555;
+  color:white;
+  font-weight: bold;
+}
+
+td, th{
+  border:1px solid #000000;
+  padding: 8px 15px;  
+}
+
+/*css da pagina inicial*/
+.banner{
+  width:100%;
+
+}
+.titulo-principal{
+  text-align: center;
+  font-size:2em;/*a fonte do titulo principal ao utilizar o "em" se multiplicara com o valor da fonte.*/
+  margin: 0 0 1em; 
+  clear:left;
+  color:rgb(0,0,0,0.3);
+}
+
+/*tipos de pseudoelementos:
+
+.titulo-principal::first-letter{
+  font-weight: bold;
+}
+
+.titulo-principal::before{
+  content:"(" ;
+}
+.titulo-principal::after{
+  content:")" ;
+}
+
+tipos de seletores/exemplos:
+main > p{ 
+  background:red;
+} 
+----pegara o filho direto da clase "mae" que no caso seria o main(principal) e deixara apenas o paragrafo em vermelho.
+
+img + p{
+  background:blue;
+}
+-----pegara o   que fica apos a primeira imagem.
+
+img ~ p{
+  background:yellow;
+}
+-----pegara todo o paragrafo apos a primeira imagem
+
+***exclusão
+
+.principal p:not(#missao){
+  background:orange
+  -----ele deixara todo o conteudo principal que nao faz parte da missao em laranja
+*/ 
+
+
+.principal{
+  padding: 3em 0;
+  background: #FEFEFE;
+
+}
+.principal p {
+  margin: 0 0 1em;
+}
+.principal strong{
+  font-weight: bold;
+}
+.principal em {
+  font-style:italico;
+}
+.utensilios {
+  width:120px;
+  float:left;
+  margin:0 20px 20px 0;
+}
+.mapa{
+  padding:3em 0;
+  background:linear-gradient(#FEFEFE, #888888) ;
+
+}
+.mapa p{
+  margin:0 0 2;
+  text-align: center;
+}
+
+.mapa-conteudo{
+  width:940px;
+  margin:0 auto;
+}
+.beneficios{
+  padding:3em 0 ;
+  background: #888888;
+  
+}
+
+.conteudo-Beneficios{
+  width: 640px;
+  margin: 0 auto;
+
+}
+.lista-beneficios{
+  width:40%;
+  display: inline-block;
+  vertical-align:top ;
+  
+}
+.itens{
+  line-height: 1.5;
+}
+.itens:nth-child(1){
+  font-weight:bold ;
+  
+}
+.itens:before{
+  content:"✵";
+  font-weight: bold;
+}
+
+.imagem-Beneficios{
+  width: 60%;
+  opacity: 1;
+  transition: 400ms;
+  box-shadow: 10px 10px 10px #000000;
+
+}
+.imagem-Beneficios:hover{
+  opacity: 0.3;
+
+}
+
+.video{
+  width:560px;
+  margin: 2em auto;
+}
+
+@media screen and (max-width:480px){
+  .caixa, .principal, .conteudo-Beneficios, .beneficios, .mapa-conteudo, .video{
+    width:auto;
+  }
+  h1{
+    text-align: center;
+  }
+  nav{
+    position:static;
+  }
+
+  .lista-beneficios, .imagem-Beneficios{
+    width=100%;
+  }
+  
+ 
+}
